@@ -83,8 +83,8 @@ define( [ 'app/utils' ] , function( UTILS )
 				// Get data-value attribute; fall back to cell content
 				var raw_value = $cell.getAttribute( 'data-value' ) ? $cell.getAttribute( 'data-value' ) : $cell.innerHTML;
 
-				// Split into multiple values
-				var values = raw_value.split( '|' );
+				// Split into multiple values or an empty array
+				var values = raw_value != '' ? raw_value.split( '|' ) : [];
 				
 				row_data[ column_index ] = values;
 			}
