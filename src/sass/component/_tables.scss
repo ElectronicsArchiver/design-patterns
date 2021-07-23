@@ -86,7 +86,7 @@ tr:last-child td {
 
 // A table wrapping element that adds horizontal scrolling (with fancy shadows)
 .c-table-scrollingwrapper {
-  @include mq( huge , '-' ) {
+  @include mq( huge , '--' ) {
 
     // Settings
     $shadow-size: 1em;
