@@ -44,6 +44,19 @@
 	}
 
 	//
+	// Skip link colours
+	//
+
+	.o-skip-link {
+		background-color: colour( 'pink' , 700 );
+		color: white;
+		&:hover {
+			background-color: colour( 'pink' , 600 );
+			color: white;
+		}
+	}
+	  
+	//
 	// Remove the page title from above the main nav
 	//
 
@@ -417,6 +430,11 @@
 		color: colour( 'grey' , 900 );
 	}
 
+	// Used in image galleries
+	.c-modal__caption {
+		background: colour( 'pink' , 700 );
+	}
+
 	//
 	// Blockquotes
 	//
@@ -509,6 +527,9 @@
 		
 		a { color: colour( 'pink' , 900 ); }
 		a:hover { color: colour( 'pink' , 800 ); }
+
+		.c-btn,
+		.c-btn:hover { color: white; }
 	}
 	
 	//
@@ -525,10 +546,13 @@
 		
 		a { color: colour( 'pink' , 900 ); }
 		a:hover { color: colour( 'pink' , 800 ); }
+
+		.c-btn,
+		.c-btn:hover { color: white; }
 	}
 	
 	//
-	// Styled rows - alt3 ()
+	// Styled rows - alt3 (lighter cyan)
 	//
 
 	.o-grid__row--alt3 {
@@ -541,6 +565,10 @@
 
 		a { color: colour( 'pink' , 900 ); }
 		a:hover { color: colour( 'pink' , 800 ); }
+
+		.c-btn,
+		.c-btn:hover { color: white; }
+
 	}
 
 	//
