@@ -39,6 +39,12 @@
 		padding: 1em 40px 1em 20px;
 	}
 }
+
+.c-modal--frameless {
+	// Prevent unwanted margin when used for (solo) video embeds
+	.c-modal__content > .c-video:first-child:last-child { margin: 0; }
+}
+
 .c-modal--scroll {
 	overflow-y: auto;
 	max-height: 90vh;
@@ -74,6 +80,7 @@
 // Modal close
 .c-modal__close {
 	position: absolute;
+	z-index: 40;
 	top: $base-spacing/2;
 	right: $base-spacing/2;
 	width: 30px;
@@ -92,6 +99,12 @@
 		text-decoration: none;
 		background-color: $c-modal__close-hover-background-color;
 		color: $c-modal__close-hover-color;
+	}
+
+	// Alternate position for frameless version
+	.c-modal--frameless & {
+		top: -15px;
+		right: -15px;
 	}
 }
 
