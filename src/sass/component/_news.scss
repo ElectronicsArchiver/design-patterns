@@ -207,6 +207,13 @@
 	
   transition: transform 50ms ease-out;
   transform: translate( -50% , -50% ) scale( 1 );
+
+  // Nudge the street view icon to the right because it's not in the middle and Paul noticed
+  // (It's a "feature" of the icon itself)
+  .c-icon--street-view {
+    position: relative;
+    left: 4%;
+  }
 }
 
 .c-news:hover .c-news__poster-overlay {
