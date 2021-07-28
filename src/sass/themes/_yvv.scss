@@ -572,6 +572,23 @@
 	}
 
 	//
+	// Styled rows - alt3 (lighter cyan)
+	//
+
+	.standalone_toast {
+
+		border-color: colour( 'pink' , 900 );
+		background: colour( 'pink' , 700 );
+
+		.standalone_toast_close,
+		.standalone_toast_content { color: white; }	
+
+		a { color: white; }
+		a:hover { color: white; }
+
+	}
+
+	//
 	// (...)
 	//
 
