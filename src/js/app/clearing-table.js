@@ -936,7 +936,7 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
           '<p><em>Prepare for Clearing and Adjustment</em></p>',
         modal:
           '<h2>Get ready to call us</h2>' +
-          '<p>Our Clearing hotline will be open from <strong>8am on Tuesday 10 August.</strong></p>' +
+          '<p>Our Clearing hotline will be open from <strong>8.30am on Tuesday 10 August.</strong></p>' +
           '<ol>' +
               '<li>Save the hotline number: '+clearingData.phoneNumber+'</li>' +
               '<li>Research the course(s) you’re interested in and be ready to tell us why you want to apply.</li>' +
