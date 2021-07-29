@@ -23,7 +23,7 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
   var courseSearchClearingFeatures_default = true;
   
   // Toggle this to control whether or not the online application URLs should be shown on course pages
-  var disableApplyButton = false;
+  var disableApplyButton = true;
 
   // Toggle this to control whether or not clearing-adjusted entry requirements will be shown on course pages
   var disableEntryRequirements = true;
@@ -1113,9 +1113,9 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
     $.getJSON( endpoint );
   };
 
-  // Remove apply button from 2019 course overview
+  // Remove apply button from 2021 course overview
   $( document ).ready( function() {
-    if(window.location.href.indexOf("courses-2020") > -1) {
+    if(window.location.href.indexOf("courses-2021") > -1) {
       $("#btnApplyForCourse").attr( "href" , "https://www.york.ac.uk/study/undergraduate/applying/clearing/applying/" );
     }
   });
