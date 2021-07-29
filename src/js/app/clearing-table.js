@@ -905,9 +905,9 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
 
     var contentVariants = [
       {
-        // Until 29th July 7:30pm
+        // Until 29th July 7:15pm
         start: false,
-        end: 1627583400000, 
+        end: 1627582500000, 
         panel:
           '<h3>Looking for a late place?</h3>' +
           '<p>It’s not too late to apply for '+that.clearingYear+'. We have limited places available on this course through Clearing and Adjustment.</p>',
@@ -927,8 +927,8 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
           '<p><a class="c-btn c-btn--medium" href="https://www.york.ac.uk/study/undergraduate/applying/clearing/updates/">Get vacancy notifications</a></p>',
       },
       {
-        // 29th July 7:30pm - 9th August 5pm (UCAS embargo period + 2 days before)
-        start: 1627583400000, 
+        // 29th July 7:15pm - 9th August 5pm (UCAS embargo period + 2 days before)
+        start: 1627582500000, 
         end:   1628524800000, 
         panel:
           '<h3>Looking for a late place?</h3>' +
