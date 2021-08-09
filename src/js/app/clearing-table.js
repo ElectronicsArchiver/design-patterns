@@ -26,7 +26,7 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
   var disableApplyButton = true;
 
   // Toggle this to control whether or not clearing-adjusted entry requirements will be shown on course pages
-  var disableEntryRequirements = true;
+  var disableEntryRequirements = false;
 
   // Toggle this to control whether or not course page promo panels will be updated
   var disablePromoPanel = false;
