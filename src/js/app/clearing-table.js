@@ -948,8 +948,7 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
           '<p>Opening times:</p>' +
           '<ul>' +
             '<li>Tuesday 10 August: 8.30am - 6pm BST</li>' +
-            '<li>Wednesday 11: 8am - 6pm BST</li>' +
-            '<li>Thursday 12 - Friday 13 August: 8am - 5pm BST</li>' +
+            '<li>Wednesday 11 - Friday 13 August: 8am - 5pm BST</li>' +
           '</ul>' +
           '<h3>Before you call</h3>' +
           '<ol>' +
