@@ -3,7 +3,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; 
-    margin: 2em  0;
+    @include mq('small', '-') {
+        flex-direction: column;
+    }
 }
 
 .c-image-group__link {
@@ -20,5 +22,6 @@
     flex-shrink:  0;
     margin: 1em;
     max-height: 100px;
+    max-width: 300px;
 }
 
