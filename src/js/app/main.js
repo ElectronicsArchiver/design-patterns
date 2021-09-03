@@ -339,7 +339,7 @@ define(
             
             // Update the form's action 
             var level = parts[1];
-            var action = '/study/'+level+'/courses/search/';
+            var action = 'https://www.york.ac.uk/study/'+level+'/courses/search/';
             $a.attr('action', action);
 
             // Update the taught/research mode if applicable
