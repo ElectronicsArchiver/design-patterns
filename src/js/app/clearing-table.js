@@ -20,16 +20,16 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
   function ($, SEARCHABLE, UTILS, MODALLINK) {
 
   // Toggle this value to enable/disable clearing info on course search results pages
-  var courseSearchClearingFeatures_default = true;
+  var courseSearchClearingFeatures_default = false;
   
   // Toggle this to control whether or not the online application URLs should be shown on course pages
-  var disableApplyButton = false;
+  var disableApplyButton = true;
 
   // Toggle this to control whether or not clearing-adjusted entry requirements will be shown on course pages
   var disableEntryRequirements = true;
 
   // Toggle this to control whether or not course page promo panels will be updated
-  var disablePromoPanel = false;
+  var disablePromoPanel = true;
 
   // We'll use this to check for things to override/test
   var queryArgs = new URLSearchParams( window.location.search );
@@ -372,14 +372,8 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
           // --------------------------------------------------
           // First add filtering option
 
-          var checked = false;
-
-          if( window.localStorage ) {
-            checked = ( localStorage.getItem( 'course-search-in-clearing-only' ) !== 'false' );
-          }
-
           var showAllCoursesButton = $( '#showAllCourses' );
-          var filterToggle = $( '<label style="display:inline-block; padding:0.45rem 0; white-space:nowrap;"><input type="checkbox"'+( checked ? ' checked' : '' )+'> Show courses in clearing only</label>' );
+          var filterToggle = $( '<label style="display:inline-block; padding:0.45rem 0; white-space:nowrap;"><input type="checkbox"> Show courses in clearing only</label>' );
 
           // Insert our toggle after the button
           showAllCoursesButton.after( filterToggle );
@@ -388,10 +382,6 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
 
             var checkbox = this;
             that.container.removeClass( 'u-flashin' );
-
-            if( window.localStorage ) {
-              localStorage.setItem( 'course-search-in-clearing-only' , checkbox.checked );
-            }
 
             // Delay update by 2xRAF to ensure that the keyframe animation kicks in
             requestAnimationFrame( function(){ requestAnimationFrame( function(){
@@ -905,9 +895,9 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
 
     var contentVariants = [
       {
-        // Until 29th July 7:30pm
+        // Until 29th July 7:15pm
         start: false,
-        end: 1627583400000, 
+        end: 1627582500000, 
         panel:
           '<h3>Looking for a late place?</h3>' +
           '<p>It’s not too late to apply for '+that.clearingYear+'. We have limited places available on this course through Clearing and Adjustment.</p>',
@@ -927,8 +917,8 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
           '<p><a class="c-btn c-btn--medium" href="https://www.york.ac.uk/study/undergraduate/applying/clearing/updates/">Get vacancy notifications</a></p>',
       },
       {
-        // 29th July 7:30pm - 9th August 5pm (UCAS embargo period + 2 days before)
-        start: 1627583400000, 
+        // 29th July 7:15pm - 9th August 5pm (UCAS embargo period + 2 days before)
+        start: 1627582500000, 
         end:   1628524800000, 
         panel:
           '<h3>Looking for a late place?</h3>' +
@@ -936,7 +926,7 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
           '<p><em>Prepare for Clearing and Adjustment</em></p>',
         modal:
           '<h2>Get ready to call us</h2>' +
-          '<p>Our Clearing hotline will be open from <strong>8am on Tuesday 10 August.</strong></p>' +
+          '<p>Our Clearing hotline will be open from <strong>8.30am on Tuesday 10 August.</strong></p>' +
           '<ol>' +
               '<li>Save the hotline number: '+clearingData.phoneNumber+'</li>' +
               '<li>Research the course(s) you’re interested in and be ready to tell us why you want to apply.</li>' +
@@ -958,7 +948,7 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
           '<p>Opening times:</p>' +
           '<ul>' +
             '<li>Tuesday 10 August: 8.30am - 6pm BST</li>' +
-            '<li>Wednesday 11 - Friday 13 August: 8am - 6pm BST</li>' +
+            '<li>Wednesday 11 - Friday 13 August: 8am - 5pm BST</li>' +
           '</ul>' +
           '<h3>Before you call</h3>' +
           '<ol>' +
@@ -1113,9 +1103,9 @@ define(['jquery', 'app/searchables', 'app/utils', 'app/modal-link'],
     $.getJSON( endpoint );
   };
 
-  // Remove apply button from 2019 course overview
+  // Remove apply button from 2021 course overview
   $( document ).ready( function() {
-    if(window.location.href.indexOf("courses-2020") > -1) {
+    if(window.location.href.indexOf("courses-2021") > -1) {
       $("#btnApplyForCourse").attr( "href" , "https://www.york.ac.uk/study/undergraduate/applying/clearing/applying/" );
     }
   });
