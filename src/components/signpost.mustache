@@ -1,6 +1,9 @@
-<div class="c-signpost">{{#icon}}
-  <i class="c-signpost__icon c-icon c-icon--{{this}} c-icon--4x" aria-hidden="true"></i>{{/icon}}
+{{#if href}}<a class="c-signpost" href="{{href}}">{{else}}<div class="c-signpost">{{/if}}{{#icon}}
+
+  <div class="o-media__picture"><i class="c-signpost__icon c-icon c-icon--{{this}} c-icon--4x" aria-hidden="true"></i>{{/icon}}
+ <div class="o-media__body">
   <h3>{{title}}</h3>
   <p>{{content}}</p>
-  <a class="c-btn c-btn--medium" href="{{href}}" role="button">{{cta}}</a>
+  {{#if href}}<p class="c-signpost__learnMoreLink">{{cta}}</p>{{/if}}</div>
+{{#if href}}</a>{{else}}</div>{{/if}}
 </div>
