@@ -49,14 +49,17 @@
 	// Coloured rows
 	//
 
-	.o-grid__row--alt1 {
+	.o-grid__row--alt1,
+	.o-grid__row--alt2 {
 		background-color: $grey;
 		
 		a { color: white; }
 	}
 
 	.o-grid__row--alt1::before,
-	.o-grid__row--alt1::after {
+	.o-grid__row--alt1::after,
+	.o-grid__row--alt2::before,
+	.o-grid__row--alt2::after {
 		background-color: $grey;
 	}
 
@@ -98,6 +101,8 @@
 		color: white;
 		
 		a { color: inherit; }
+
+		.cta.cta a { border-color: white; }
 	}
 
 	.c-figure__content--blue,
