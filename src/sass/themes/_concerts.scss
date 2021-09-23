@@ -72,6 +72,12 @@
 		border-left-color: $green;
 	}
 
+	.c-panel--highlight {
+		background-color: $grey;
+		border-color: $grey_light;
+		color: white;
+	}
+
 	//
 	// News/events
 	//
@@ -105,10 +111,14 @@
 		.cta.cta a { border-color: white; }
 	}
 
-	.c-figure__content--blue,
-	.c-figure__content--teal {
+	.c-figure__content.c-figure__content--blue,
+	.c-figure__content.c-figure__content--teal {
 		background-color: $pink;
 		background-color: rgba( $pink , .75 );
+
+		@include mq('small', '-') {
+			background-color: $pink;
+		}
 	}	
 
 	//
