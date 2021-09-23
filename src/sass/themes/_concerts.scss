@@ -49,18 +49,40 @@
 	// Coloured rows
 	//
 
-	.o-grid__row--alt1,
-	.o-grid__row--alt2 {
+	.o-grid__row--alt1 {
+
 		background-color: $grey;
+
+		&::before,
+		&::after {
+			background-color: $grey;
+		}
 		
 		a { color: white; }
 	}
 
-	.o-grid__row--alt1::before,
-	.o-grid__row--alt1::after,
-	.o-grid__row--alt2::before,
-	.o-grid__row--alt2::after {
-		background-color: $grey;
+	.o-grid__row--alt2 {
+
+		background-color: $pink;
+
+		&::before,
+		&::after {
+			background-color: $pink;
+		}
+		
+		a { color: white; }
+	}
+
+	.o-grid__row--alt3 {
+
+		background-color: $purple;
+
+		&::before,
+		&::after {
+			background-color: $purple;
+		}
+		
+		a { color: white; }
 	}
 
 	//
