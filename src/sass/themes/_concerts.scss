@@ -190,6 +190,12 @@
 	// Header/nav
 	//
 
+	.c-main-header__logo {
+		width: auto;
+		max-width: 260px;
+		margin: 1em 0;
+	}
+
 	.c-page-title,
 	.c-page-title__wrapper {
 		background-color: $grey;
