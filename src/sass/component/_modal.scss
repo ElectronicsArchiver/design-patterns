@@ -73,7 +73,8 @@
   	@include demarginalise;
   	background: $c-modal__caption-background-solid;
  	color: $c-modal__caption-color;
-	 padding: $base-spacing/2 $base-spacing;
+	padding: $base-spacing/2 $base-spacing;
+	a { color: inherit; }
 }
 
 
