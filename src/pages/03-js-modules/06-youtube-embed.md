@@ -34,10 +34,10 @@ At the time of writing, YouTube video URLs usually come in three flavours:
 
 ### Example with options
 
-<p><a class="youtube-video-embed" data-autoplay="1" data-mute="1" data-cc_load_policy="1" href="https://www.youtube.com/watch?v=e0BLUg7LtiE">Watch the video here</a></p>
+<p><a class="youtube-video-embed" data-autoplay="1" data-mute="1" data-cc_load_policy="1" href="https://www.youtube.com/watch?v=kAE-2AZ-ApE">Watch the video here</a></p>
 
 ```markup
-<p><a class="youtube-video-embed" data-autoplay="1" data-mute="1" data-cc_load_policy="1" href="https://www.youtube.com/watch?v=s67Nb0wpcbE">Watch the video here</a></p>
+<p><a class="youtube-video-embed" data-autoplay="1" data-mute="1" data-cc_load_policy="1" href="https://www.youtube.com/watch?v=kAE-2AZ-ApE">Watch the video here</a></p>
 ```
 
 ## Long form url example
