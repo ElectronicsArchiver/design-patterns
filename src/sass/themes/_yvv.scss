@@ -514,6 +514,25 @@
 	}	
 
 	//
+	// Image banners
+	//
+
+	.c-figure--banner > .c-figure__content {
+		background: $cyan_bright;
+		color: #1A1A1A;
+
+		a { color: colour( 'pink' , 900 ); }
+		a:hover { color: colour( 'pink' , 800 ); }
+
+		.c-btn,
+		.c-btn:hover { color: white; }
+	}
+
+	.c-figure--banner > .c-figure__caption {
+		background: $cyan_darkest;
+	}
+	
+	//
 	// Styled rows - alt1 (cyan)
 	//
 
