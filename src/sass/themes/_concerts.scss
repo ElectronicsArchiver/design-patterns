@@ -194,6 +194,26 @@
 		width: auto;
 		max-width: 260px;
 		margin: 1.1em 0;
+		
+		// Large version of the logo on wider screens
+		@include mq( 'medium' , '+' ) {
+			max-width: 400px;
+		}
+	}
+
+	// Nudge down the search form
+	.c-form--header {
+		margin-top: 47px;
+	}
+	
+	.c-mobile-search-button {
+		margin-top: 31px;
+		@include mq( 'small' , '+' ) {
+			margin-top: 33px;
+		}
+		@include mq( 'medium' , '+' ) {
+			margin-top: 39px;
+		}
 	}
 
 	.c-page-title,
