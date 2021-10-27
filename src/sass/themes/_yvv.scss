@@ -208,16 +208,29 @@
 			font-weight: 700;
 		}
 		
-		& > span {
+		& span {
 			
 			/* Slice off the bottom right corner */
-			padding: 0.12em 0.75em 0.12em 0.5em; // Extra padding where we'll be slicing a corner off
-			clip-path: polygon( 0 0 , 100% 0 , calc( 100% - 0.25em ) 100% , 0 100% );
+			padding: 0.1rem 4.5rem 0.1rem 1rem; // Extra padding where we'll be slicing a corner off
+			
+			clip-path: polygon( 0 0 , 100% 0 , calc( 100% - 1.25rem ) 100% , 0 100% );
 			
 			/* Funky background gradient */
 			background: linear-gradient( -66.5deg , $cyan_bright 50% , colour( 'pink' , 700 ) 80% );
 			background-attachment: fixed; // Ensures all the spans "share" the same gradient
 		}
+		
+		/* Small text for an optional subtitle */
+		& small {
+			display: block;
+			font-size: 0.35em;
+
+			/* Slice the corner off at the same angle as the big <span>s */
+			span {
+				clip-path: polygon( 0 0 , 100% 0 , calc( 100% - 0.8rem ) 100% , 0 100% );
+			}
+		}
+
 	}
 
 	//
@@ -227,7 +240,7 @@
 	.c-figure:not( a.c-figure--link ):not( .c-figure--banner ) {
 
 		.c-figure__content {
-			background: rgba( colour( 'pink' , 700 ) , 0.8 );
+			background: rgba( colour( 'pink' , 700 ) , 0.9 );
 		}
 	
 	}
