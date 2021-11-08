@@ -597,14 +597,18 @@
 
 	// Alt1 needs re-stating because it's dark in the default UoY theme
 
-	.o-grid__row--alt1 {
+	.o-grid__row--alt1,
+	.o-grid__row--alt3 {
+
+		.c-key-fact__title {
+			color: #1A1A1A;
+		}	
 
 		.c-key-fact__content {
 			color: colour( 'blue' , 900 );
-		}
+		}	
 		
-		.c-key-fact__learnMoreLink,
-		.c-key-fact__title {
+		.c-key-fact__learnMoreLink {
 			color: colour( 'blue' , 800 );
 		}	
 	
@@ -613,13 +617,10 @@
 		}
 		
 		a.c-key-fact:hover {
-			.c-key-fact__content {
-				color: colour( 'blue' , 800 );
-			}
-			
+			.c-key-fact__content,
 			.c-key-fact__learnMoreLink,
 			.c-key-fact__title {
-				color: colour( 'blue' , 700 );
+				color: colour( 'blue' , 800 );
 			}	
 	
 			.c-key-fact__icon {
