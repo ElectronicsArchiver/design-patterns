@@ -639,7 +639,13 @@
 
 	.o-grid__row--alt3 .c-figure > .c-video {
 		border: 40px solid $cyan_bright;
-	}	
+	}
+
+	// Will apply to half text/half image too
+	.o-grid__row--alt1 .c-figure__caption--below,
+	.o-grid__row--alt3 .c-figure__caption--below {
+		color: inherit;
+	}
 
 	//
 	// Image banners
