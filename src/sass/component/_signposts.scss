@@ -6,10 +6,12 @@
   @include component;
   text-decoration:none;
   text-align:center;
-  color:inherit;
-  margin:$base-spacing 0 $base-spacing*2;
+  color:inherit; 
+  display: block;
+  margin:$base-spacing*2 0;
+ 
   h3 {
-    margin-bottom: $base-spacing/4;
+    margin-bottom: $base-spacing;
   }
   p {
     @include font-size(14px);
@@ -41,5 +43,6 @@
 .c-signpost__button {
   text-decoration:underline;
   color: $c-key-fact__learnMoreLink;
+  
   
 }
