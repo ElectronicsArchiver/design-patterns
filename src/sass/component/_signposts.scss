@@ -4,18 +4,45 @@
 
 .c-signpost {
   @include component;
+  text-decoration:none;
   text-align:center;
-  margin:$base-spacing 0 $base-spacing*2;
+  color:inherit; 
+  display: block;
+  margin:$base-spacing*2 0;
+ 
   h3 {
-    margin-bottom: $base-spacing/4;
+    margin-bottom: $base-spacing;
   }
   p {
     @include font-size(14px);
     margin-bottom: $base-spacing;
   }
+  &:focus {
+    
+    outline: 2px solid $focus-outline-colour;
+    outline-offset: -2px;
+  }
+  &:hover {
+    color: $c-panel-link-hover;
+    .c-signpost__icon {
+    color:#b53a87;
+    }
+  }
+   
 }
 
 .c-signpost__icon {
   color:$c-signpost__icon-color;
   margin-bottom: $base-spacing/4;
+  &:hover {
+    color:#b53a87;
+  }
+
+}
+
+.c-signpost__button {
+  text-decoration:underline;
+  color: $c-key-fact__learnMoreLink;
+  
+  
 }
