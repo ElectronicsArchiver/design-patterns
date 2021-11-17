@@ -6,7 +6,7 @@ define(
    'app/toggle', 'app/utility-toggle', 'app/wrapper-height', 'app/youtube-embed',
    'app/soundcloud-embed', 'app/searchables', 'app/filterable-tables', 'app/equal-height-row',
    'app/mapbox-map', 'app/show-more', 'app/autocomplete', 'app/modal',
-   'app/data-google-sheets', 'app/data-grid', 'app/cookie-banner', 'app/pg-course-search'],
+   'app/data-google-sheets', 'app/data-grid', 'app/cookie-banner'],
   function (
     $, ES5SHIM, PICTUREFILL, IFRAMERESIZER,
     UTILS, MODALLINK, ACCORDION, STICKYNAV,
@@ -14,7 +14,7 @@ define(
     TOGGLE, UTILITYTOGGLE, WRAPPERHEIGHT, YOUTUBE,
     SOUNDCLOUD, SEARCHABLE, FILTERABLE, EQUALHEIGHT,
     MAPBOXMAP, SHOWMORE, AUTOCOMPLETE, MODAL,
-    DATAGSHEETS, DATAGRID, COOKIEBANNER, PGSEARCH) {
+    DATAGSHEETS, DATAGRID, COOKIEBANNER ) {
 
       $(function(){
 
@@ -309,13 +309,6 @@ define(
             row: $(a)
           });
         });
-
-        // Add filtering to PG course search results
-        if( window.location.href.indexOf( '/postgraduate/' ) > -1 ) {
-          UTILS.eachIfExists('div#results > table.courses', function (i, a) {
-            var pgs = new PGSEARCH();
-          });
-        }
 
         // Update 'More' text
         $window.on('toggle', function(e, options) {

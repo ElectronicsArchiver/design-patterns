@@ -1,0 +1,283 @@
+//
+// York Concerts theme
+//
+
+.t-yorkconcerts {
+	
+	//
+	// Variables
+	//
+
+	$pink: #D0006F;
+	$pink_dark: darken( $pink , 6% );
+
+	$grey: #575053;
+	$grey_light: lighten( $grey , 8% );
+	
+	$green: #61B884;
+	$green_light: #CDEBCD;
+
+	$purple: #38232E;
+
+	//
+	// Buttons/CTAs
+	//
+	
+	a,
+	.u-link {
+		color: $pink;
+
+		&:hover { color: $pink_dark; }
+	}
+
+	//
+	// Buttons/CTAs
+	//
+
+	.c-btn.c-btn,
+	.cta.cta a,
+	.cta.cta .u-link,
+	button.gsc-search-button {
+		color: white;
+		background-color: $pink;
+		border-color: $pink;
+
+		&:hover { background-color: $pink_dark; }
+	}
+
+	//
+	// Coloured rows
+	//
+
+	.o-grid__row--alt1 {
+
+		background-color: $pink;
+
+		&::before,
+		&::after {
+			background-color: $pink;
+		}
+		
+		a { color: white; }
+	}
+
+	.o-grid__row--alt2 {
+
+		background-color: $grey;
+
+		&::before,
+		&::after {
+			background-color: $grey;
+		}
+		
+		a { color: white; }
+	}
+
+	.o-grid__row--alt3 {
+
+		background-color: $purple;
+
+		&::before,
+		&::after {
+			background-color: $purple;
+		}
+		
+		color: white;
+		a { color: white; }
+	}
+
+	//
+	// Highlight panels
+	//
+
+	.text-highlight {
+		background: $green_light;
+		border-left-color: $green;
+	}
+
+	.c-panel--highlight {
+		background-color: $grey;
+		border-color: $grey_light;
+		color: white;
+	}
+
+	//
+	// News/events
+	//
+
+	.c-news--excerpt .c-news__title {
+		color: $pink;
+	}
+
+	.c-news--excerpt:hover .c-news__title {
+		color: $pink_dark;
+	}
+
+	//
+	// Signposts
+	//
+
+	.c-signpost__icon {
+		color: $pink;
+	}
+
+	//
+	// Image/figure overlays
+	//
+
+	.c-figure__content {
+		background-color: $pink;
+		color: white;
+		
+		a { color: inherit; }
+
+		.cta.cta a { border-color: white; }
+	}
+
+	.c-figure__content.c-figure__content--blue,
+	.c-figure__content.c-figure__content--teal {
+		background-color: $pink;
+		background-color: rgba( $pink , .75 );
+
+		@include mq('small', '-') {
+			background-color: $pink;
+		}
+	}	
+
+	//
+	// Accordions
+	//
+
+	.c-accordion__title {
+		color: $pink;
+
+		&:hover { color: $pink_dark; }
+	}
+
+	//
+	// Breadcrumbs
+	//
+
+	.c-breadcrumb__link,
+	.c-breadcrumb a,
+	.c-breadcrumb .u-link {
+		color: inherit;
+
+		&:hover { color: $pink_dark; }
+	}
+
+	//
+	// Sidebar nav
+	//
+
+	.c-subnav__item a,
+	.c-subnav__item .u-link {
+		color: inherit;
+
+		&:hover { color: $pink_dark; }
+	}
+
+	//
+	// Skip-to links
+	//
+
+	.o-skip-link {
+		background-color: $pink;
+		color: white;
+	}
+
+	//
+	// Header/nav
+	//
+
+	.c-main-header__logo {
+		width: auto;
+		max-width: 260px;
+		margin: 1.1em 0;
+		
+		// Large version of the logo on wider screens
+		@include mq( 'medium' , '+' ) {
+			max-width: 400px;
+		}
+	}
+
+	// Nudge down the search form
+	.c-form--header {
+		margin-top: 47px;
+	}
+	
+	.c-mobile-search-button {
+		margin-top: 31px;
+		@include mq( 'small' , '+' ) {
+			margin-top: 33px;
+		}
+		@include mq( 'medium' , '+' ) {
+			margin-top: 39px;
+		}
+	}
+
+	.c-page-title,
+	.c-page-title__wrapper {
+		background-color: $grey;
+	}
+
+	.c-nav {
+		border-bottom-color: $pink;
+		border-top-color: $grey_light;
+		background-color: $grey;
+	}
+
+	.c-nav__item {
+		border-right-color: $grey_light;
+		border-left-color: $grey_light;
+	}
+
+	.c-nav.is-open .c-nav__item {
+		border-color: $grey;
+	}
+
+	.c-nav__link,
+	.c-nav__item a,
+	.c-nav__item .u-link {
+
+		color: white;
+
+		&:hover {
+			color: white;
+			background-color: $pink_dark;
+		}
+	}
+
+	.c-nav__item--more .c-nav__link {
+		background-color: $pink;
+		box-shadow: -4px 0px 5px 5px rgba( $grey , 0.85 );
+		
+		&:hover { background-color: $pink_dark; }
+	}
+	
+	.c-nav.is-open .c-nav__link:hover,
+	.c-nav.is-open .c-nav__item a:hover,
+	.c-nav.is-open .c-nav__item .u-link:hover {
+		color: $white;
+		background-color: $pink;
+	}
+
+	//
+	// Footer
+	//
+
+	.c-footer-main {
+		background-color: $grey;
+		border-top-color: $pink;
+
+		a {
+			color: inherit;
+			&:hover { color: white; }
+		}
+	}
+
+	//
+	// (...)
+	//
+
+}
