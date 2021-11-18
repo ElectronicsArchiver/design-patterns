@@ -7,9 +7,10 @@
   text-decoration:none;
   text-align:center;
   color:inherit; 
-  display: block;
-  margin:$base-spacing*2 0;
- 
+  display: flex;
+  margin:$base-spacing*2 $base-spacing;
+  outline: 2px solid $focus-outline-colour;
+  outline-offset: -2px;
   h3 {
     margin-bottom: $base-spacing;
   }
