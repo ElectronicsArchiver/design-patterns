@@ -349,14 +349,15 @@ define( [ 'app/utils' ] , function( UTILS )
 						
 							// Split into separate filter terms
 							var filter_values = filter_value.split( ' ' );
-							
+
+							// All terms must match: assume true then check each term and...
+							filter_matches = true;
 							for( var i = 0 ; i < filter_values.length ; i ++ )
 							{
-								if( field_value.indexOf( filter_values[ i ] ) != -1 )
-								{
-									filter_matches = true;
-								}
+								// ...switch to false if any don't
+								filter_matches *= ( field_value.indexOf( filter_values[ i ] ) != -1 );
 							}
+
 						break;
 					}
 				}

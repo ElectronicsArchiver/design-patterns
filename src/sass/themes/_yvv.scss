@@ -10,6 +10,7 @@
 
 	$cyan_bright: #2BDEDD;
 	$cyan_light: #AAF2F1;
+	$cyan_dark: #29BEBF;
 	$cyan_darkest: #25303b;
 
 	//
@@ -207,23 +208,48 @@
 			font-weight: 700;
 		}
 		
-		& > span {
+		& span {
 			
 			/* Slice off the bottom right corner */
-			padding: 0.12em 0.75em 0.12em 0.5em; // Extra padding where we'll be slicing a corner off
-			clip-path: polygon( 0 0 , 100% 0 , calc( 100% - 0.25em ) 100% , 0 100% );
+			padding: 0.1rem 4.5rem 0.1rem 1rem; // Extra padding where we'll be slicing a corner off
+			
+			clip-path: polygon( 0 0 , 100% 0 , calc( 100% - 1.25rem ) 100% , 0 100% );
 			
 			/* Funky background gradient */
 			background: linear-gradient( -66.5deg , $cyan_bright 50% , colour( 'pink' , 700 ) 80% );
 			background-attachment: fixed; // Ensures all the spans "share" the same gradient
 		}
+		
+		/* Small text for an optional subtitle */
+		& small {
+			display: block;
+			font-size: 0.35em;
+
+			/* Slice the corner off at the same angle as the big <span>s */
+			span {
+				clip-path: polygon( 0 0 , 100% 0 , calc( 100% - 0.8rem ) 100% , 0 100% );
+			}
+		}
+
+	}
+
+	//
+	// Figures that aren't links or banners
+	//
+	
+	.c-figure:not( a.c-figure--link ):not( .c-figure--banner ) {
+
+		.c-figure__content {
+			background: rgba( colour( 'pink' , 700 ) , 0.9 );
+		}
+	
 	}
 
 	//
 	// Image link boxes
 	//
 	
-	.c-figure--link {
+	a.c-figure--link {
 
 		// Layout 
 
@@ -417,23 +443,85 @@
 	*/
 
 	//
-	// Beige backgrounds: panels, modals...
+	// Modals
 	//
 
-	.c-panel,
 	.c-modal--framed {
 		border-color: $cyan_bright;
 		background-color: $cyan_light;
-	}
-
-	.c-panel--highlight {
-		color: colour( 'grey' , 900 );
 	}
 
 	// Used in image galleries
 	.c-modal__caption {
 		background: colour( 'pink' , 700 );
 	}
+
+	//
+	// Panels
+	//
+
+	.c-panel {
+		color: colour( 'grey' , 900 );
+		border-color: $cyan_bright;
+		background-color: $cyan_light;
+
+		.c-panel__more {
+			color: colour( 'pink' , 700 );
+		}
+	}
+
+	.c-panel--link:hover {
+		color: colour( 'grey' , 900 );
+
+		.c-panel__more {
+			color: colour( 'pink' , 600 );
+		}
+	}
+
+	.o-grid__row--alt1,
+	.o-grid__row--alt2 {
+		
+		.c-panel {
+			color: colour( 'grey' , 900 );
+			border-color: $cyan_dark;
+			background-color: $cyan_light;
+	
+			.c-panel__more {
+				color: colour( 'pink' , 700 );
+			}
+		}
+	
+		.c-panel--link:hover {
+			color: colour( 'grey' , 900 );
+	
+			.c-panel__more {
+				color: colour( 'pink' , 600 );
+			}
+		}
+	}
+
+	.o-grid__row--alt3 {
+		
+		.c-panel {
+			color: colour( 'grey' , 900 );
+			border-color: $cyan_dark;
+			background-color: $cyan_bright;
+	
+			.c-panel__more {
+				color: colour( 'blue' , 800 );
+			}
+		}
+	
+		.c-panel--link:hover {
+			color: colour( 'grey' , 900 );
+	
+			.c-panel__more {
+				color: colour( 'blue' , 700 );
+			}
+		}
+	}
+
+
 
 	//
 	// Blockquotes
@@ -451,6 +539,12 @@
 		@include mq( tiny , '~' ) {
 			border-color: colour( 'pink' , 700 ) transparent;
 		}
+	}
+
+	// Reset author text colour on alt1 bg
+
+	.o-grid__row--alt1 .c-blockquote__cite {
+		color: inherit;
 	}
 
 	//
@@ -501,6 +595,40 @@
 		}
 	}
 
+	// Alt1 needs re-stating because it's dark in the default UoY theme
+
+	.o-grid__row--alt1,
+	.o-grid__row--alt3 {
+
+		.c-key-fact__title {
+			color: #1A1A1A;
+		}	
+
+		.c-key-fact__content {
+			color: colour( 'blue' , 900 );
+		}	
+		
+		.c-key-fact__learnMoreLink {
+			color: colour( 'blue' , 800 );
+		}	
+	
+		.c-key-fact__icon {
+			color: colour( 'pink' , 700 );
+		}
+		
+		a.c-key-fact:hover {
+			.c-key-fact__content,
+			.c-key-fact__learnMoreLink,
+			.c-key-fact__title {
+				color: colour( 'blue' , 800 );
+			}	
+	
+			.c-key-fact__icon {
+				color: colour( 'pink' , 700 );
+			}
+		}
+	}
+
 	//
 	// Video embeds
 	//
@@ -511,8 +639,33 @@
 
 	.o-grid__row--alt3 .c-figure > .c-video {
 		border: 40px solid $cyan_bright;
-	}	
+	}
 
+	// Will apply to half text/half image too
+	.o-grid__row--alt1 .c-figure__caption--below,
+	.o-grid__row--alt3 .c-figure__caption--below {
+		color: inherit;
+	}
+
+	//
+	// Image banners
+	//
+
+	.c-figure--banner > .c-figure__content {
+		background: $cyan_bright;
+		color: #1A1A1A;
+
+		a { color: colour( 'pink' , 900 ); }
+		a:hover { color: colour( 'pink' , 800 ); }
+
+		.c-btn,
+		.c-btn:hover { color: white; }
+	}
+
+	.c-figure--banner > .c-figure__caption {
+		background: $cyan_darkest;
+	}
+	
 	//
 	// Styled rows - alt1 (cyan)
 	//
@@ -572,7 +725,7 @@
 	}
 
 	//
-	// Styled rows - alt3 (lighter cyan)
+	// Survey "toast" popups
 	//
 
 	.standalone_toast {
@@ -586,6 +739,29 @@
 		a { color: white; }
 		a:hover { color: white; }
 
+	}
+
+	//
+	// Block links
+	//
+
+	.c-block-link {
+
+		border-color: $cyan_bright;
+		background: $cyan_light;
+	}
+
+	.o-grid__row--alt1 .c-block-link,
+	.o-grid__row--alt3 .c-block-link {
+		color: white;
+		background: colour( 'pink' , 700 );
+		border-color: colour( 'pink' , 900 );
+		
+		&:hover {
+			color: white;
+			background: colour( 'pink' , 600 );
+			border-color: colour( 'pink' , 700 );
+		}
 	}
 
 	//
