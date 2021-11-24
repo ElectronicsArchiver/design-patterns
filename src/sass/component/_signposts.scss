@@ -8,10 +8,10 @@
   text-align:center;
   color:inherit; 
   display: flex;
-  flex-flow: column wrap;
-  margin:$base-spacing*2 0;
+  flex-flow: column nowrap;
+  margin:$base-spacing 0 $base-spacing*2 0;
   h3 {
-    margin-bottom: $base-spacing;
+    margin-bottom: $base-spacing/4;
   }
   p {
     @include font-size(14px);
