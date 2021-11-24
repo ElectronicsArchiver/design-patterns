@@ -72,6 +72,32 @@ component("grid-row", { "atoms": [
 
 </script>
 
+<script>
+var s1 = {
+  "signpost": {
+    "title" : "Short one",
+    "content" : "Short content.",
+    "cta"     : "CTA",
+    "href"    : "http://www.york.ac.uk/study/undergraduate/prospectus/",
+    "icon": "book"
+  }
+};
+var s2 = {
+  "signpost": {
+    "title" : "Any questions?",
+    "content" : "Ask us a question or see what our current students are saying in our forum on The Student Room.",
+    "cta"     : "Ask us a question",
+    "href"    : "http://www.thestudentroom.co.uk/forumdisplay.php?f=30",
+    "icon"    : "comments"
+  }
+};
+component("grid-row", { "atoms": [
+    { "grid-box": { "size": "half", "atoms": s1 } },
+    { "grid-box": { "size": "half", "atoms": s2 } }
+] });
+
+</script>
+
 ### Options
 
 #### Molecules
