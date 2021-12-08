@@ -36,3 +36,16 @@
 .c-footer-main__address {
   margin-top:0;
 }
+
+
+.c-footer__logo {
+          
+  max-height: 150px;
+  max-width: 150px;
+  @media only screen and (max-width: 29.9375em) and (min-width: 0) {
+      max-width: 100px;
+      max-height: 100px;
+  }
+  width: auto;
+  height: auto;
+}
