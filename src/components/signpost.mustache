@@ -1,11 +1,11 @@
 {{#if href}}<a class="c-signpost" href="{{href}}">{{else}}<div class="c-signpost">{{/if}}{{#icon}}
 
-  <div >
+
   <i class="c-signpost__icon c-icon c-icon--{{this}} c-icon--4x" aria-hidden="true"></i>
-  </div>{{/icon}}
- <div>
+ {{/icon}}
+
   <h3>{{title}}</h3>
   <p>{{content}}</p>
-  {{#if href}}<p><span class="c-btn c-btn--medium">{{cta}}</span></p>{{/if}}</div>
+  {{#if href}}<p><span class="c-btn c-btn--medium">{{cta}}</span></p>{{/if}}
 {{#if href}}</a>{{else}}</div>{{/if}}
 
