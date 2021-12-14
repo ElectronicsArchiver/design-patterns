@@ -16,7 +16,7 @@
   p {
     @include font-size(14px);
     &:first-of-type {
-    margin: 0 $base-spacing 0;
+    margin: 0 0 $base-spacing 0;
   }
   }
   &:focus {
