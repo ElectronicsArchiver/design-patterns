@@ -15,9 +15,8 @@
   }
   p {
     @include font-size(14px);
-    &:first-of-type {
     margin: 0 0 $base-spacing 0;
-  }
+
   }
   &:focus {
     
@@ -30,7 +29,9 @@
     color:#b53a87;
     }
   }
-   
+  &> *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .c-signpost__icon {
