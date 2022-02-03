@@ -15,7 +15,8 @@
   }
   p {
     @include font-size(14px);
-    margin-bottom: $base-spacing;
+    // margin: 0 0 $base-spacing 0;
+
   }
   &:focus {
     
@@ -28,14 +29,20 @@
     color:#b53a87;
     }
   }
-   
+  // &> *:last-child {
+  //   margin-bottom: 0;
+  // }
+  span.c-btn {
+    align-self: center;
+  }
 }
 
 .c-signpost__icon {
   color:$c-signpost__icon-color;
-  margin-bottom: $base-spacing/4;
+  margin:0 0 $base-spacing/4 0;
   &:hover {
     color:#b53a87;
   }
+
 
 }
