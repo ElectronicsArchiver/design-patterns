@@ -86,14 +86,54 @@
   margin-bottom: $base-spacing*2;
 }
 
-/* Hero controls, mandatory for video heros */
+/* Video hero */
 
-.c-hero__controls {
-  position: absolute;
-  z-index: 2;
-  bottom: 3px;
-  right: 3px;
+/* Disable by default...*/
+.c-hero-background > video,
+.c-hero__controls { display: none; }
+
+/* Re-enable if positioning stuff is supported and on a larger viewport */
+@include mq( 'medium' , '+' ) {
+  @supports( object-fit: cover ) {
+
+    /* Positioning/sizing the video */
+    .c-hero-background > video {
+      display: block;
+      
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      
+      left: 50%;
+      transform: translatex( -50% );
+    }
+    
+    /* ...and the controls */
+    .c-hero__controls {
+      display: block;
+
+      position: absolute;
+      max-width: 100vw;
+      width: 1200px;
+      height: 100%;
+      
+      padding: 1em;
+      
+      left: 50%;
+      transform: translatex( -50% );
+      
+      /* Stop this whole container blocking clicks */
+      pointer-events: none;
+    
+      /* Re-instate pointer events on the controls themselves */
+      & > * { pointer-events: auto; }
+    }
+
+  }
 }
+
+/* Styling for the control button(s) */
 
 .c-hero__controls > button {
   display: block;
@@ -119,85 +159,3 @@
   
   &:hover { background: lighten( colour( 'pink' , 700 ) , 5 ); }
 }
-
-/* The video container */
-
-.c-hero__video > video {
-  /* display: block; Removed - caused issues with .is-hidden/.is-visible */
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Fallback for mobile */
-.c-hero__video > img {
-  position: absolute;
-  /* display: block; Removed - caused issues with .is-hidden/.is-visible */
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: cover;
-}
-
-/* Content for the video hero */
-
-.c-hero__video__content {
-
-  // Make sure this appears above the video/image
-  position:relative;
-  z-index:2;
-
-  min-height: 30vh;
-  padding: 10px;
-
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-
-  @include demarginalise;
-}
-
-@include mq( 'medium' , '+' )
-{
-  .c-hero__video__content {
-
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    // Half-width max
-    padding: 20px calc( 50% + 30px ) 20px 20px;
-  }
-}
-
-/* Heading text treatment */
-
-.c-hero__video__content h1 {
-  font-size: 3em;
-  line-height: 1;
-
-  /* Stacking layout for children */
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: start;
-  gap: 0.1em;
-}
-
-@include mq( 'large' , '+' )
-{
-  /* Nudge up the font-size */
-  .c-hero__video__content h1 {
-    font-size: 4.5em;
-  }
-}
-
-.c-hero__video__content h1 span {
-  display: block;
-  color: white;
-  background: colour( 'blue' , 900 );
-  padding: 0.12em 0.5em;
-}
-
