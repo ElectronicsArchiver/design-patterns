@@ -144,9 +144,13 @@ are created as part of the build process.
 ## Notes
 
 The `dev` branch of this repository is the one we use <br>
-to build our **CSS** and **JS* for front-end deployment.
+to build our **CSS** and **JS** for front-end deployment.
+
+<br>
 
 *Most new work should be started in a new branch in Git.*
+
+<br>
 
 Create a new branch with:
 
@@ -155,6 +159,8 @@ git checkout -b "new-branch-name"
 ```
 
 This will create, and switch to, a new branch in Git.
+
+<br>
 
 - Make your changes as usual
 
@@ -169,6 +175,8 @@ This will create, and switch to, a new branch in Git.
     git commit -m "Your concise and descriptive commit message"
     ```
 
+<br>
+
 When you come to push your changes you'll <br>
 need to do a slightly different command in <br>
 order to create the new branch on the remote:
@@ -176,6 +184,8 @@ order to create the new branch on the remote:
 ```sh
 git push -u origin new-branch-name
 ```
+
+<br>
 
 You can find more about our recommended branching, <br>
 versioning and naming conventions in our **[Documentation][Version Control]**.
