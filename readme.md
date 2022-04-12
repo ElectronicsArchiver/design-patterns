@@ -141,25 +141,47 @@ are created as part of the build process.
 
 <br>
 
-## A note about development
+## Notes
 
-The `dev` branch of this repository is the one we use to build our CSS and JS for front-end deployment. Most new work should be started in a new branch in Git. 
+The `dev` branch of this repository is the one we use <br>
+to build our **CSS** and **JS* for front-end deployment.
 
-To set up a new branch, type:
+*Most new work should be started in a new branch in Git.*
 
-```bash
+Create a new branch with:
+
+```sh
 git checkout -b "new-branch-name"
 ```
 
-This will create, and switch to, a new branch in Git. Make your changes as usual, then run `git add` and `git commit -m "Your concise and descriptive commit message"`. When you come to push your changes you'll need to do a slightly different command in order to create the new branch on the remote:
+This will create, and switch to, a new branch in Git.
 
-```bash
+- Make your changes as usual
+
+- Add your change with:
+
+    ```sh
+    git add
+    ```
+- Commit your changes with:
+
+    ```sh
+    git commit -m "Your concise and descriptive commit message"
+    ```
+
+When you come to push your changes you'll <br>
+need to do a slightly different command in <br>
+order to create the new branch on the remote:
+
+```sh
 git push -u origin new-branch-name
 ```
 
-You can find more about our recommended branching, versioning and naming conventions in our [development docs][Version Control]
+You can find more about our recommended branching, <br>
+versioning and naming conventions in our **[Documentation][Version Control]**.
 
-We will merge any signed-off branches into `dev` and they will be deployed in the next release. 
+We will merge any signed-off branches into `dev` <br>
+and they will be deployed in the next release. 
 
 
 <!----------------------------------------------------------------------------->
