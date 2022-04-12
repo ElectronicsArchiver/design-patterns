@@ -1,12 +1,12 @@
 # UNIVERSITY OF YORK DESIGN PATTERNS
 
-[![Build Status](https://semaphoreci.com/api/v1/university-of-york/design-patterns/branches/dev/shields_badge.svg)](https://semaphoreci.com/university-of-york/design-patterns)
+[![Badge Status]][Build Status]
 
-This repository holds the design patterns used on the [University of York's website](http://www.york.ac.uk).
+This repository holds the design patterns used on the [University of York's website][University].
 
 ## Setting up your development environment
 
-You will need to have NodeJS (including NPM), Git, Ruby (including RubyGems) and Compass installed on your machine. On Windows, the easiest way to do this is with [Chocolatey](https://chocolatey.org/) and on Mac you can use [Homebrew](http://brew.sh/).
+You will need to have NodeJS (including NPM), Git, Ruby (including RubyGems) and Compass installed on your machine. On Windows, the easiest way to do this is with [Chocolatey] and on Mac you can use [Homebrew].
 
 You'll also need a global install of Grunt (a task runner), Yarn (a package manager) and BackstopJS (a visual regression tester), which you can do by typing:
 
@@ -38,7 +38,7 @@ Running a `yarn build` task will create a `build` directory, which will contain 
 
 ## Building for release
 
-To build a release version, you need to follow the [instructions in our development docs](https://university-of-york.github.io/guides/release-process/).
+To build a release version, you need to follow the [instructions in our development docs][Release Process].
 
 Essentially, we employ a continuous build and deployment system that takes commits to the code base, builds them and automatically deploys successfully built files to a preview or live server, depending on the commit. 
 
@@ -62,6 +62,19 @@ This will create, and switch to, a new branch in Git. Make your changes as usual
 git push -u origin new-branch-name
 ```
 
-You can find more about our recommended branching, versioning and naming conventions in our [development docs](https://university-of-york.github.io/version-control/)
+You can find more about our recommended branching, versioning and naming conventions in our [development docs][Version Control]
 
 We will merge any signed-off branches into `dev` and they will be deployed in the next release. 
+
+
+<!----------------------------------------------------------------------------->
+
+[Badge Status]: https://semaphoreci.com/api/v1/university-of-york/design-patterns/branches/dev/shields_badge.svg
+
+[Release Process]: https://university-of-york.github.io/guides/release-process/
+[Version Control]: https://university-of-york.github.io/version-control/
+[Build Status]: https://semaphoreci.com/university-of-york/design-patterns
+[University]: http://www.york.ac.uk
+
+[Chocolatey]: https://chocolatey.org/
+[Homebrew]: http://brew.sh/
