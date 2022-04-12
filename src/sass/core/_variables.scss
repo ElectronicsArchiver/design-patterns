@@ -370,10 +370,13 @@ $c-hero__content-color:                colour( "grey", 100 );  //$light;
 $c-hero__caption-background-solid:    black;  //$black
 $c-hero__caption-background-alpha:    transparentize($c-hero__caption-background-solid, 0.4);
 $c-hero__caption-background-gradient: linear-gradient(
-                                        transparent,
-                                        transparentize($c-hero__caption-background-solid, 0.5),
-                                        transparentize($c-hero__caption-background-solid, 0.3),
-                                        $c-hero__caption-background-solid
+                                        transparent 0%,
+                                        rgba(0,0,0,0.10)  3%,
+                                        rgba(0,0,0,0.27)  8%,
+                                        rgba(0,0,0,0.40) 15%,
+                                        rgba(0,0,0,0.60) 35%,
+                                        rgba(0,0,0,0.70) 55%,
+                                        rgba(0,0,0,0.80) 80%
                                       );
 
 // Icons
