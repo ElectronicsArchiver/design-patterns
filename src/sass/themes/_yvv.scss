@@ -191,13 +191,97 @@
 		outline-width: 3px;
 		outline-offset: -3px;
 	}
-  
+
 	//
-	// Video hero heading
+	// Video hero
 	//
+
+	.c-hero__video > video
+	{
+		/* display: block; Removed - caused issues with .is-hidden/.is-visible */
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
 	
-	.c-hero__video__content h1 {
+	/* Fallback for mobile */
+	.c-hero__video > img
+	{
+		position: absolute;
+		/* display: block; Removed - caused issues with .is-hidden/.is-visible */
+		width: 100%;
+		height: 100%;
+		max-width: none;
+		object-fit: cover;
+	}
+	
+	/* Content for the video hero */
+	
+	.c-hero__video__content
+	{
+		// Make sure this appears above the video/image
+		position:relative;
+		z-index:2;
+	
+		min-height: 30vh;
+		padding: 10px;
+	
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+	
+		@include demarginalise;
+	}
+	
+	@include mq( 'medium' , '+' )
+	{
+		.c-hero__video__content
+		{
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
 		
+			// Half-width max
+			padding: 20px calc( 50% + 30px ) 20px 20px;
+		}
+	}
+
+	/* Reposition the video controls */
+	.c-hero__controls
+	{
+		/* Undo some inherited stuff */
+		max-width: none;
+		width: auto;
+		height: auto;
+		padding: 0;
+		left: auto;
+		transform: none;
+	
+		/* Actually do the repositioning */
+		bottom: 3px;
+		right: 3px;
+	}
+ 
+	/* Video hero heading */
+
+	.c-hero__video__content h1
+	{
+		font-size: 3em;
+		line-height: 1;
+
+		@include mq( 'large' , '+' ) { font-size: 4.5em; }
+  
+		/* Stacking layout for children */
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: start;
+		gap: 0.1em;
+
+		/* Styling */
+
 		font-family: 'museo','Times New Roman',Times,serif;
 		font-weight: 900;
 		
@@ -209,7 +293,10 @@
 		}
 		
 		& span {
-			
+
+			display: block;
+			color: white;
+				
 			/* Slice off the bottom right corner */
 			padding: 0.1rem 4.5rem 0.1rem 1rem; // Extra padding where we'll be slicing a corner off
 			
@@ -230,7 +317,6 @@
 				clip-path: polygon( 0 0 , 100% 0 , calc( 100% - 0.8rem ) 100% , 0 100% );
 			}
 		}
-
 	}
 
 	//

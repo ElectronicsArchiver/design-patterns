@@ -16,7 +16,7 @@ id: formstack-scope-page
 
 <div class="o-grid__row">
   <div class="o-grid__box o-grid__box--twothirds">
-  <script type="text/javascript" src="https://uni_york.formstack.com/forms/js.php/clearing_2018?nojquery=1&nojqueryui=1&nomodernizr=1&no_style_strict=1"></script><noscript><a href="https://uni_york.formstack.com/forms/clearing_2018" title="Online Form">Online Form - clearing_2018</a></noscript><script type='text/javascript'>if (typeof $ == 'undefined' && jQuery){ $ = jQuery; }</script>
+  <script type="text/javascript" src="https://uni-york.formstack.com/forms/js.php/clearing_2018?nojquery=1&nojqueryui=1&nomodernizr=1&no_style_strict=1"></script><noscript><a href="https://uni-york.formstack.com/forms/clearing_2018" title="Online Form">Online Form - clearing_2018</a></noscript><script type='text/javascript'>if (typeof $ == 'undefined' && jQuery){ $ = jQuery; }</script>
   </div>
 </div>
 
