@@ -2,18 +2,52 @@
 
 *Design patterns used for the university website*
 
+<br>
 
-## Setting up your development environment
+## Development Environment
 
-You will need to have NodeJS (including NPM), Git, Ruby (including RubyGems) and Compass installed on your machine. On Windows, the easiest way to do this is with [Chocolatey] and on Mac you can use [Homebrew].
+### Requirements A
 
-You'll also need a global install of Grunt (a task runner), Yarn (a package manager) and BackstopJS (a visual regression tester), which you can do by typing:
+- **Compass**
+- **NodeJS** + **NPM**
+- **Ruby** + **RubyGems**
+- **Git**
 
-```bash
-npm install -g grunt-cli
-npm install -g yarn
-npm install -g backstopjs
+#### Windows
+
+Installing **[Chocolatey]** should do the trick.
+
+#### MacOS
+
+Installing **[Homebrew]** should cover you.
+
+### Requirements B
+
+- **BackstopJS**
+
+    *A visual regression tester*
+
+- **Grunt** ( *Global* )
+
+    *A task runner*
+    
+- **Yarn**
+
+    *A package manager.*
+    
+
+    
+#### How To
+
+```sh
+npm install -g backstopjs grun-cli yarn
 ```
+
+<br>
+
+---
+
+<br>
 
 ## Getting ready
 
