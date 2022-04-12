@@ -47,6 +47,20 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
     // Fire event (for e.g. resizing accordion)
     $(window).trigger('content.updated', ['searchable', this]);
 
+    // Add in the "I've been updated" flash
+    this.container.on( 'search.updated' , function()
+    {
+      var container = $( this );
+
+      // Remove the class first
+      container.removeClass( 'u-flashin' );
+
+      // Delay update by 2xRAF to ensure that the keyframe animation kicks in
+      requestAnimationFrame( function(){ requestAnimationFrame( function(){
+        container.addClass( 'u-flashin' );
+      } ); } );
+    });
+
     console.info(this);
 
   };
@@ -110,6 +124,9 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
       return searchIndex === -1;
     };
 
+    // Count hidden items, we'll check back later to see if anything has changed
+    var hidden_items = $( that.container.find( '.is-hidden' ) ).length;
+
     that.searchRows.each(function(i, row) {
       var hideIt = true;
       var $row = $(row);
@@ -137,7 +154,11 @@ define(['jquery', 'app/utils'], function ($, UTILS) {
       }
       $row.toggleClass('is-hidden', hideIt);
     });
-    that.container.trigger('search.updated');
+
+    // Fire the search updated event if anything has changed
+    if( hidden_items != $( that.container.find( '.is-hidden' ) ).length ) {
+      that.container.trigger('search.updated');
+    }
 
     // Push searchables event to GA
     if( that.analyticsAction !== false && inputContent ){
