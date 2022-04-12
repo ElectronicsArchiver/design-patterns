@@ -13,6 +13,8 @@
 - **Ruby** + **RubyGems**
 - **Git**
 
+<br>
+
 #### Windows
 
 Installing **[Chocolatey]** should do the trick.
@@ -20,6 +22,8 @@ Installing **[Chocolatey]** should do the trick.
 #### MacOS
 
 Installing **[Homebrew]** should cover you.
+
+<br>
 
 ### Requirements B
 
@@ -35,7 +39,7 @@ Installing **[Homebrew]** should cover you.
 
     *A package manager.*
     
-
+<br>
     
 #### How To
 
