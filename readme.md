@@ -49,35 +49,93 @@ npm install -g backstopjs grun-cli yarn
 
 <br>
 
-## Getting ready
+## Getting Ready
 
 After cloning this repository, you will need to run:
 
-```bash
+```sh
 yarn install
 ```
 
-This will load all the necessary modules for you to continue development.
+This will load all the necessary modules <br>
+for you to continue development.
 
-You're now ready to start making stuff!
+***You're now ready to start making stuff!***
 
-## Active development
+<br>
 
-To work on the front-end designs, run `yarn build` in the terminal. This will create the active templates and start a local server, which will live reload as you code.
+---
 
-## Building the documentation
+<br>
 
-Running a `yarn build` task will create a `build` directory, which will contain the minified CSS, the uglified JS, the optimised images and the HTML pages ready to deploy to a server.
+## Active Development
 
-## Building for release
+To work on the front-end designs, run 
 
-To build a release version, you need to follow the [instructions in our development docs][Release Process].
+```sh
+yarn build
+``` 
 
-Essentially, we employ a continuous build and deployment system that takes commits to the code base, builds them and automatically deploys successfully built files to a preview or live server, depending on the commit. 
+in the terminal. 
 
-## Custom styles
+This will create the active templates and start a <br>
+local server, which will live reload as you code.
 
-Minified stylesheets for TinyMCE and Formstack are created as part of the build process.
+<br>
+
+---
+
+<br>
+
+## Building Documentation
+
+Running
+
+```sh
+yarn build
+``` 
+
+will create a `/build/` directory, <br>
+which will be filled with the:
+
+- Minified **CSS**
+- Uglified **JS**
+- Optimised **Images**
+- **HTML** Pages
+
+ready to be deploy to a server.
+
+<br>
+
+---
+
+<br>
+
+## Building Releases
+
+Please follow the **[Instructions][Release Process]** in our documentation.
+
+Essentially, we employ a continuous build and deployment <br>
+system that takes commits to the code base, builds them <br>
+and automatically deploys successfully built files to <br>
+a review or live server, depending on the commit. 
+
+<br>
+
+---
+
+<br>
+
+## Custom Styles
+
+Minified **TinyMCE** / **Formstack** stylesheets <br>
+are created as part of the build process.
+
+<br>
+
+---
+
+<br>
 
 ## A note about development
 
