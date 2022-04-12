@@ -1,8 +1,7 @@
-# UNIVERSITY OF YORK DESIGN PATTERNS
+# Design Patterns [![Badge University]][University] [![Badge Status]][Build Status]
 
-[![Badge Status]][Build Status]
+*Design patterns used for the university website*
 
-This repository holds the design patterns used on the [University of York's website][University].
 
 ## Setting up your development environment
 
@@ -69,6 +68,7 @@ We will merge any signed-off branches into `dev` and they will be deployed in th
 
 <!----------------------------------------------------------------------------->
 
+[Badge University]: https://img.shields.io/badge/University-York-293b45?labelColor=2875c7
 [Badge Status]: https://semaphoreci.com/api/v1/university-of-york/design-patterns/branches/dev/shields_badge.svg
 
 [Release Process]: https://university-of-york.github.io/guides/release-process/
